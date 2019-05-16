@@ -29,3 +29,12 @@ cc_test(
         "@com_google_googletest//:gtest_main",
     ],
 )
+
+cc_library(
+    name = "interval_map",
+    hdrs = ["interval_map.h"],
+    copts = NLIB_DEFAULT_COPTS,
+    linkopts = NLIB_DEFAULT_LINKOPTS,
+    deps = [
+    ],
+)

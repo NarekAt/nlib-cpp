@@ -18,6 +18,7 @@ NLIB_GCC_FLAGS = [
     "-Wwrite-strings",
     "-Wno-missing-field-initializers",
     "-Wno-sign-compare",
+    "-std=c++14"
 ]
 
 NLIB_GCC_TEST_FLAGS = [
