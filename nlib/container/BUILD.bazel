@@ -38,3 +38,23 @@ cc_library(
     deps = [
     ],
 )
+
+cc_library(
+    name = "hash_table",
+    hdrs = ["hash_table.h"],
+    copts = NLIB_DEFAULT_COPTS,
+    linkopts = NLIB_DEFAULT_LINKOPTS,
+    deps = [
+    ],
+)
+
+cc_test(
+    name = "hash_table_test",
+    srcs = ["internal/hash_table_test.cc"],
+    copts = NLIB_TEST_COPTS,
+    linkopts = NLIB_DEFAULT_LINKOPTS,
+    deps = [
+        ":hash_table",
+        "@com_google_googletest//:gtest_main",
+    ],
+)
