@@ -1,10 +1,7 @@
-
 load(
     "//nlib:build_config/configure.bzl",
     "NLIB_DEFAULT_COPTS",
     "NLIB_DEFAULT_LINKOPTS",
-    "NLIB_EXCEPTIONS_FLAG",
-    "NLIB_EXCEPTIONS_FLAG_LINKOPTS",
     "NLIB_TEST_COPTS",
 )
 

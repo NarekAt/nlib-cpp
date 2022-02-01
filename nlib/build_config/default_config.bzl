@@ -1,4 +1,3 @@
-
 NLIB_GCC_EXCEPTIONS_FLAGS = [
     "-fexceptions",
 ]
@@ -18,7 +17,7 @@ NLIB_GCC_FLAGS = [
     "-Wwrite-strings",
     "-Wno-missing-field-initializers",
     "-Wno-sign-compare",
-    "-std=c++14"
+    "-std=c++17",
 ]
 
 NLIB_GCC_TEST_FLAGS = [
@@ -29,6 +28,7 @@ NLIB_GCC_TEST_FLAGS = [
     "-Wno-unused-function",
     "-Wno-unused-parameter",
     "-Wno-unused-private-field",
+    "-std=c++17",
 ]
 
 NLIB_MSVC_EXCEPTIONS_FLAGS = [
