@@ -1,0 +1,48 @@
+load(
+    "//nlib:build_config/configure.bzl",
+    "NLIB_DEFAULT_COPTS",
+    "NLIB_DEFAULT_LINKOPTS",
+    "NLIB_TEST_COPTS",
+)
+
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+    name = "threadsafe_queue",
+    hdrs = ["threadsafe_queue.h"],
+    copts = NLIB_DEFAULT_COPTS,
+    linkopts = NLIB_DEFAULT_LINKOPTS,
+    deps = [
+    ],
+)
+
+cc_library(
+    name = "threads_joiner",
+    hdrs = ["threads_joiner.h"],
+    copts = NLIB_DEFAULT_COPTS,
+    linkopts = NLIB_DEFAULT_LINKOPTS,
+    deps = [
+    ],
+)
+
+cc_library(
+    name = "threadpool",
+    hdrs = ["threadpool.h"],
+    copts = NLIB_DEFAULT_COPTS,
+    linkopts = NLIB_DEFAULT_LINKOPTS,
+    deps = [
+        ":threads_joiner",
+        ":threadsafe_queue",
+    ],
+)
+
+cc_test(
+    name = "threadpool_test",
+    srcs = ["threadpool_test.cc"],
+    copts = NLIB_TEST_COPTS,
+    linkopts = NLIB_DEFAULT_LINKOPTS,
+    deps = [
+        ":threadpool",
+        "@com_google_googletest//:gtest_main",
+    ],
+)
