@@ -17,6 +17,15 @@ cc_library(
 )
 
 cc_library(
+    name = "concurrent_queue",
+    hdrs = ["concurrent_queue.h"],
+    copts = NLIB_DEFAULT_COPTS,
+    linkopts = NLIB_DEFAULT_LINKOPTS,
+    deps = [
+    ],
+)
+
+cc_library(
     name = "threads_joiner",
     hdrs = ["threads_joiner.h"],
     copts = NLIB_DEFAULT_COPTS,
